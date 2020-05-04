@@ -1,0 +1,1 @@
+carton exec -- dbic-migration version --schema_class codewellBE::Schema -Ilib --database PostgreSQL --dsn='dbi:Pg:dbname=codewell' upgrade
