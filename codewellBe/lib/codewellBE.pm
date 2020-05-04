@@ -1,6 +1,8 @@
 package codewellBE;
 use Mojo::Base 'Mojolicious';
 
+use codewellBE::Schema;
+
 # This method will run once at server start
 sub startup {
   my $self = shift;
@@ -10,6 +12,10 @@ sub startup {
 
   # Configure the application
   $self->secrets($config->{secrets});
+
+  # DB schema
+  my $schema = codewellBE::Schema->connect('dbi:Pg:dbname=codewell');
+  $self->helper(db => sub { return $schema; });
 
   # Router
   my $r = $self->routes;
