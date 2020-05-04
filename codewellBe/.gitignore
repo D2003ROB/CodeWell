@@ -1,2 +1,4 @@
 local/
 cpanfile.snapshot
+share/codewell-schema/*
+share/codewell-schema.db
