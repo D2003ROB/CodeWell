@@ -8,7 +8,15 @@ function Register() {
   const [form] = Form.useForm();
 
   const onFinish = values => {
-    console.log('Received values of form: ', values);
+    delete values.confirm;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://127.0.0.1:2323/register');
+    xhr.send(JSON.stringify(values));
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        console.log('Response: ' + xhr.response);
+      }
+    }
   };
 
   return (
@@ -22,7 +30,7 @@ function Register() {
           name="register"
           onFinish={onFinish}
         >
-          <Form.Item label={t('Username')} name="username"
+          <Form.Item label={t('Username')} name="id"
             rules={[
               {
                 required: true,
@@ -32,7 +40,7 @@ function Register() {
           >
             <Input />
           </Form.Item>
-          <Form.Item label={t('First name')} name="first-name"
+          <Form.Item label={t('First name')} name="first_name"
             rules={[
               {
                 required: true,
@@ -42,7 +50,7 @@ function Register() {
           >
             <Input />
           </Form.Item>
-          <Form.Item label={t('Last name')} name="last-name"
+          <Form.Item label={t('Last name')} name="last_name"
             rules={[
               {
                 required: true,
@@ -58,7 +66,7 @@ function Register() {
             label={t('Password')}
             rules={[
               {
-                min: 10,
+                min: 2,
                 required: true,
                 message: t('Password must be at least 10 characters!'),
               },
@@ -93,8 +101,8 @@ function Register() {
             <Input.Password />
           </Form.Item>
           <Form.Item
-            name={t('email')}
-            label="email"
+            name="mail"
+            label={t('email')}
             rules={[
               {
                 type: 'email',

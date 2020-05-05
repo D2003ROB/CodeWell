@@ -5,7 +5,7 @@ use Mojo::Base 'Mojolicious::Controller';
 sub welcome {
   my $self = shift;
   # Render template "example/welcome.html.ep" with message
-  $self->db->resultset('User')->create({ id => 'Petru' });
+
   $self->render(msg => 'Welcome to the Mojolicious real-time web framework!');
 }
 

@@ -1,4 +1,5 @@
 requires 'DBD::Pg';
 requires 'DBIx::Class::Migration';
 requires 'DBIx::Class::Schema';
+requires 'JSON::MaybeXS';
 requires 'Mojo::File';

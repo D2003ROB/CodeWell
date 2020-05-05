@@ -22,6 +22,10 @@ sub startup {
 
   # Normal route to controller
   $r->get('/')->to('example#welcome');
+
+  # Users
+  $r->post('/register')->name('on_register')
+    ->to('user#on_register');
 }
 
 1;
