@@ -2,10 +2,21 @@
   "About": "Despre",
   "Confirm password": "Confirmă parola",
   "Email": "Email",
+  "email": "email",
+  "Invalid email address!": "Adresă de email invalidă!",
   "Name": "Nume",
   "Password": "Parolă",
+  "Password must be at least 10 characters!":
+    "Parola trebuie să conțină minim 10 caractere",
+  "Please confirm your password!": "Te rog confirmă parola!",
+  "Please input your email!": "Te rog introdu emailul",
+  "Please input your name!": "Te rog introdu numele tău!",
+  "Please input your password!": "Te rog introdu o parolă!",
+  "Please input your username!": "Te rog introdu un nume de utilizator!",
   "Register": "Înregistrare",
   "Register your account": "Înregistrează-ți contul",
+  "The two passwords that you entered do not match!":
+    "Cele două parole pe care le-ai introdus nu coincid!",
   "Username": "Nume de utilizator",
   "Users": "Utilizatori",
   "welcome": "bun venit"

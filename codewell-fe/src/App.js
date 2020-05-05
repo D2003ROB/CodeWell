@@ -7,7 +7,6 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Register from './User/Register';
 
