@@ -8,6 +8,21 @@ __PACKAGE__->add_columns(
     data_type => 'text',
   },
 
+  first_name => {
+    data_type => 'text',
+    is_nullable => 0,
+  },
+
+  last_name => {
+    data_type => 'text',
+    is_nullable => 0,
+  },
+
+  password => {
+    data_type => 'text',
+    is_nullable => 0,
+  },
+
   mail => {
     data_type => 'text',
     is_nullable => 0
