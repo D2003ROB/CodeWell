@@ -32,6 +32,26 @@ function Register() {
           >
             <Input />
           </Form.Item>
+          <Form.Item label={t('First name')} name="first-name"
+            rules={[
+              {
+                required: true,
+                message: t('Please input your first name!'),
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item label={t('Last name')} name="last-name"
+            rules={[
+              {
+                required: true,
+                message: t('Please input your last name!'),
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
 
           <Form.Item
             name="password"
@@ -47,7 +67,6 @@ function Register() {
           >
             <Input.Password />
           </Form.Item>
-
           <Form.Item
             name="confirm"
             label={t('Confirm password')}
@@ -73,17 +92,7 @@ function Register() {
           >
             <Input.Password />
           </Form.Item>
-          <Form.Item label={t('Name')} name="name"
-            rules={[
-              {
-                required: true,
-                message: t('Please input your name!'),
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-              <Form.Item
+          <Form.Item
             name={t('email')}
             label="email"
             rules={[
