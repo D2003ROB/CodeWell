@@ -66,7 +66,7 @@ function Register() {
             label={t('Password')}
             rules={[
               {
-                min: 2,
+                min: 10,
                 required: true,
                 message: t('Password must be at least 10 characters!'),
               },
