@@ -11,6 +11,7 @@ function Register() {
     delete values.confirm;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://127.0.0.1:2323/register');
+    xhr.withCredentials = true;
     xhr.send(JSON.stringify(values));
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {

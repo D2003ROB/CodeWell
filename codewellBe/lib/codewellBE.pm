@@ -17,6 +17,13 @@ sub startup {
   my $schema = codewellBE::Schema->connect('dbi:Pg:dbname=codewell');
   $self->helper(db => sub { return $schema; });
 
+  $self->hook(before_dispatch => sub {
+    my $c = shift;
+    $c->res->headers->header('Access-Control-Allow-Origin'
+      => 'http://localhost:3000');
+    $c->res->headers->header('Access-Control-Allow-Credentials' => 'true');
+  });
+
   # Router
   my $r = $self->routes;
 

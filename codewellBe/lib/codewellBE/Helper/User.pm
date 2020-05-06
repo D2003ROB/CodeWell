@@ -12,6 +12,6 @@ our $VERSION = '1';
 
 sub validate_password {
   my $password = shift;
-  return $password > 9;
+  return length $password > 9;
 }
 1;
