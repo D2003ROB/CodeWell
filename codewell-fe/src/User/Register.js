@@ -10,7 +10,7 @@ function Register() {
   const onFinish = values => {
     delete values.confirm;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://127.0.0.1:2323/register');
+    xhr.open('POST', 'http://localhost:3000/api/register');
     xhr.withCredentials = true;
     xhr.send(JSON.stringify(values));
     xhr.onreadystatechange = function() {

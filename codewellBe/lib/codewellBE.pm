@@ -19,9 +19,6 @@ sub startup {
 
   $self->hook(before_dispatch => sub {
     my $c = shift;
-    $c->res->headers->header('Access-Control-Allow-Origin'
-      => 'http://localhost:3000');
-    $c->res->headers->header('Access-Control-Allow-Credentials' => 'true');
   });
 
   # Router
@@ -31,7 +28,7 @@ sub startup {
   $r->get('/')->to('example#welcome');
 
   # Users
-  $r->post('/register')->name('on_register')
+  $r->post('/api/register')->name('on_register')
     ->to('user#on_register');
 }
 
