@@ -31,6 +31,8 @@ sub startup {
   # Users
   $r->post('/api/register')->name('on_register')
     ->to('user#on_register');
+  $r->post('/api/login')->name('on_login')
+    ->to('user#on_login');
 }
 
 1;
