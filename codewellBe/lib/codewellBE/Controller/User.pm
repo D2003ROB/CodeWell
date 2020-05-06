@@ -13,9 +13,9 @@ sub on_register {
   my $success = 1;
   $success = 0 unless validate_password($user_info->{password});
 
-  say $self->session('petrutest');
+  $user_info->{password} = $self->scrypt($user_info->{password});
+
   $self->db->resultset('User')->create($user_info) if $success;
-  $self->session(petrutest => "asddsa", expiration => 6000000);
 
   $self->render(json => "{success: $success}");
 }

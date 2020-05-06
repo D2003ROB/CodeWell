@@ -9,6 +9,7 @@ sub startup {
 
   # Load configuration from hash returned by config file
   my $config = $self->plugin('Config');
+  $self->plugin('Scrypt');
 
   # Configure the application
   $self->secrets($config->{secrets});

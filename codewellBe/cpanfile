@@ -3,3 +3,4 @@ requires 'DBIx::Class::Migration';
 requires 'DBIx::Class::Schema';
 requires 'JSON::MaybeXS';
 requires 'Mojo::File';
+requires 'Mojolicious::Plugin::Scrypt';
