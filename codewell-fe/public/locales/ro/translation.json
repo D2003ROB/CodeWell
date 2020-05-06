@@ -6,7 +6,9 @@
   "First name": "Prenume",
   "Invalid email address!": "Adresă de email invalidă!",
   "Last name": "Nume de familie",
+  "Log in": "Log in",
   "Name": "Nume",
+  "or": "sau",
   "Password": "Parolă",
   "Password must be at least 10 characters!":
     "Parola trebuie să conțină minim 10 caractere!",
@@ -15,9 +17,10 @@
   "Please input your first name!": "Te rog introdu prenumele tău!",
   "Please input your last name!": "Te rog introdu numele tău de familie!",
   "Please input your name!": "Te rog introdu numele tău!",
-  "Please input your password!": "Te rog introdu o parolă!",
-  "Please input your username!": "Te rog introdu un nume de utilizator!",
+  "Please input your password!": "Te rog introdu parola ta!",
+  "Please input your username!": "Te rog introdu numele tău de utilizator!",
   "Register": "Înregistrare",
+  "register now": "înregistrează-te acum",
   "Register your account": "Înregistrează-ți contul",
   "The two passwords that you entered do not match!":
     "Cele două parole pe care le-ai introdus nu coincid!",
