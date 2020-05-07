@@ -18,8 +18,7 @@ sub on_login {
     $self->session(logged_in => 1);
   }
 
-  $self->render(json => "{success: $success}");
-
+  $self->render(json => { success => $success });
 }
 
 sub on_register {

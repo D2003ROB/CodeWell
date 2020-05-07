@@ -8,7 +8,11 @@ import { useTranslation } from 'react-i18next';
 
 import React from 'react';
 import './App.css';
+
+import Auth from './Permissions/Auth.js';
+import CreateCode from './Code/Create.js';
 import Login from './User/Login';
+import LoggedInRoute from './Permissions/LoggedInRoute.js';
 import Register from './User/Register';
 
 function App() {
@@ -33,6 +37,9 @@ function App() {
             <li>
               <Link to="/login">{t('Log in')}</Link>
             </li>
+            <li>
+              <Link to="/create-code">{t('Create code')}</Link>
+            </li>
           </ul>
         </nav>
 
@@ -43,7 +50,7 @@ function App() {
             <About />
           </Route>
           <Route path="/login">
-            <Login />
+            <Login auth={Auth}/>
           </Route>
           <Route path="/register">
             <Register />
@@ -51,6 +58,9 @@ function App() {
           <Route path="/users">
             <Users />
           </Route>
+          <LoggedInRoute auth={Auth} path="/create-code">
+            <CreateCode />
+          </LoggedInRoute>
           <Route path="/">
             <Home />
           </Route>
