@@ -1,6 +1,5 @@
 const Auth = {
   isAuthenticated: false,
-
   login(callback) {
     Auth.isAuthenticated = true;
 

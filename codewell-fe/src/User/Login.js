@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, Row } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
@@ -7,26 +8,24 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 function Login(props) {
   const { t } = useTranslation();
   const [form] = Form.useForm();
+  let history = useHistory();
 
   const onFinish = values => {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://localhost:3000/api/login');
     xhr.withCredentials = true;
     xhr.send(JSON.stringify(values));
+
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
         const response = JSON.parse(xhr.response);
-        console.log(response);
         if (response.success === 1) {
-          console.log("executat");
-          console.log(props);
-          props.auth.login();
+          props.auth.login(() => history.push("/") );
         }
       }
     }
   };
 
-  console.log(props.auth.isAuthenticated);
   return (
     <>
       <Row>
