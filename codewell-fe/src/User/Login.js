@@ -9,20 +9,17 @@ function Login(props) {
   const [form] = Form.useForm();
 
   const onFinish = values => {
-    // TODO use fetch
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:3000/api/login');
-    xhr.withCredentials = true;
-    xhr.send(JSON.stringify(values));
-
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        const response = JSON.parse(xhr.response);
-        if (response.success === 1) {
-          props.onLoginSuccess(values.id);
-        }
+    fetch('http://localhost:3000/api/login',
+      {
+        method: 'POST',
+        body: JSON.stringify(values)
       }
-    }
+    ).then(response => response.json())
+    .then(data => {
+      if (data.success === 1) {
+        props.onLoginSuccess(values.id);
+      }
+    });
   };
 
   return (

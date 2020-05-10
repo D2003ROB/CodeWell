@@ -9,15 +9,15 @@ function Register() {
 
   const onFinish = values => {
     delete values.confirm;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:3000/api/register');
-    xhr.withCredentials = true;
-    xhr.send(JSON.stringify(values));
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        console.log('Response: ' + xhr.response);
+    fetch('http://localhost:3000/api/register',
+      {
+        method: 'POST',
+        body: JSON.stringify(values)
       }
-    }
+    ).then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
   };
 
   return (
