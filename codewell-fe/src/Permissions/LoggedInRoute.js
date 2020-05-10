@@ -6,7 +6,7 @@ function LoggedInRoute(props) {
   return (
     <Route
       render={({ location }) =>
-        props.auth.isAuthenticated ? (
+        props.userData.id ? (
           props.children
         ) : (
           <Redirect

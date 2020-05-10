@@ -1,7 +1,11 @@
 const Auth = {
   isAuthenticated: false,
-  login(callback) {
+  username: "",
+
+  login(username, callback) {
     Auth.isAuthenticated = true;
+    console.log(username);
+    Auth.username = username;
 
     setTimeout(callback, 100);
   },
