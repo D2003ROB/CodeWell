@@ -25,38 +25,39 @@ function Login(props) {
   return (
     <>
       <Row>
-      <Form
-        name="login"
-        className="login-form"
-        onFinish={onFinish}
-      >
-        <Form.Item
-          name="id"
-          rules={[{ required: true,
-            message: t('Please input your username!') }]}
+        <Form
+          name="login"
+          className="login-form"
+          onFinish={onFinish}
         >
-          <Input prefix={<UserOutlined className="site-form-item-icon" />}
-            placeholder={t('Username')} />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          rules={[{ required: true,
-            message: t('Please input your password!') }]}
-        >
-          <Input
-            prefix={<LockOutlined className="site-form-item-icon" />}
-            type="password"
-            placeholder={t('Password')}
-          />
-        </Form.Item>
+          <Form.Item
+            name="id"
+            rules={[{ required: true,
+              message: t('Please input your username!') }]}
+          >
+            <Input prefix={<UserOutlined className="site-form-item-icon" />}
+              placeholder={t('Username')} />
+          </Form.Item>
+          <Form.Item
+            name="password"
+            rules={[{ required: true,
+              message: t('Please input your password!') }]}
+          >
+            <Input
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              type="password"
+              placeholder={t('Password')}
+            />
+          </Form.Item>
 
-        <Form.Item>
-          <Button type="primary" htmlType="submit" className="login-form-button">
-            {t('Log in')}
-          </Button>
-          {t('or')} <a href="/register">{t('register now')}!</a>
-        </Form.Item>
-      </Form>
+          <Form.Item>
+            <Button type="primary" htmlType="submit" className="login-form-button"
+              id="login-button">
+              {t('Log in')}
+            </Button>
+            {t('or')} <a href="/register">{t('register now')}!</a>
+          </Form.Item>
+        </Form>
       </Row>
     </>
   );
