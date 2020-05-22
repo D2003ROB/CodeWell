@@ -1,8 +1,8 @@
 {
   "About": "Despre",
+  "Add code": "Adaugă cod",
   "Add your code": "Adaugă codul tău",
   "Confirm password": "Confirmă parola",
-  "Create code": "Crează cod",
   "Email": "Email",
   "email": "email",
   "First name": "Prenume",
@@ -24,6 +24,7 @@
   "Register": "Înregistrare",
   "register now": "înregistrează-te acum",
   "Register your account": "Înregistrează-ți contul",
+  "Submit": "Trimite",
   "The two passwords that you entered do not match!":
     "Cele două parole pe care le-ai introdus nu coincid!",
   "Username": "Nume de utilizator",

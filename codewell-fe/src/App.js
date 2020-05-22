@@ -11,7 +11,7 @@ import { Layout } from 'antd';
 
 import './App.css';
 import Auth from './Permissions/Auth.js';
-import CreateCode from './Code/Create.js';
+import AddCode from './Code/Add.js';
 import Login from './User/Login';
 import LoggedInRoute from './Permissions/LoggedInRoute.js';
 import Navbar from './UI/Navbar.js';
@@ -45,7 +45,7 @@ function App() {
               <Link to="/login">{t('Log in')}</Link>
             </li>
             <li>
-              <Link to="/create-code">{t('Create code')}</Link>
+              <Link to="/create-code">{t('Add code')}</Link>
             </li>
           </ul>
         </nav>
@@ -61,7 +61,7 @@ function App() {
             <Register />
           </Route>
           <LoggedInRoute userData={userData} path="/create-code">
-            <CreateCode />
+            <AddCode />
           </LoggedInRoute>
         </Switch>
       </Content>
